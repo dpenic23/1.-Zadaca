@@ -4,26 +4,26 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Task01 {
-    public class IntegerList : IIntegerList {
+namespace Task02 {
+    class GenericList<T> : IGenericList<T> {
 
-        private int[] _internalStorage;
+        private T[] _internalStorage;
         public int Count { get; private set; }
 
-        public IntegerList() : this(4) {
+        public GenericList() : this(4) {
         }
 
-        public IntegerList(int initialSize) {
+        public GenericList(int initialSize) {
             if (initialSize < 0) {
                 throw new ArgumentOutOfRangeException("Initial size has to " +
                     "be nonnegative number: " + initialSize);
             }
 
-            _internalStorage = new int[initialSize];
+            _internalStorage = new T[initialSize];
             Count = 0;
         }
 
-        public void Add(int item) {
+        public void Add(T item) {
             if (Count == _internalStorage.Length) {
                 resize();
             }
@@ -33,14 +33,14 @@ namespace Task01 {
         }
 
         private void resize() {
-            int[] tmpStorage = new int[2 * Count];
+            T[] tmpStorage = new T[2 * Count];
             for (int index = 0; index < _internalStorage.Length; index++) {
                 tmpStorage[index] = _internalStorage[index];
             }
             _internalStorage = tmpStorage;
         }
 
-        public bool Remove(int item) {
+        public bool Remove(T item) {
             int itemIndex = IndexOf(item);
             return RemoveAt(itemIndex);
         }
@@ -50,7 +50,7 @@ namespace Task01 {
                 return false;
             }
 
-            for(int position = index; position < Count - 1; position++) {
+            for (int position = index; position < Count - 1; position++) {
                 _internalStorage[position] = _internalStorage[position + 1];
             }
 
@@ -58,8 +58,8 @@ namespace Task01 {
             return true;
         }
 
-        public int GetElement(int index) {
-            if(index < 0 || index >= Count) {
+        public T GetElement(int index) {
+            if (index < 0 || index >= Count) {
                 throw new IndexOutOfRangeException("Index has to be from interval: [" +
                     0 + ", " + Count + ">");
             }
@@ -67,9 +67,9 @@ namespace Task01 {
             return _internalStorage[index];
         }
 
-        public int IndexOf(int item) {
+        public int IndexOf(T item) {
             for (int index = 0; index < Count; index++) {
-                if (_internalStorage[index] == item) {
+                if (_internalStorage[index].Equals(item)) {
                     return index;
                 }
             }
@@ -81,7 +81,7 @@ namespace Task01 {
             Count = 0;
         }
 
-        public bool Contains(int item) {
+        public bool Contains(T item) {
             return IndexOf(item) != -1;
         }
 

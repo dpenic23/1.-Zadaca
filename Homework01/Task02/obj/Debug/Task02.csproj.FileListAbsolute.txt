@@ -1,0 +1,5 @@
+C:\Users\Domagoj\Documents\C#\1.-Zadaca\Homework01\Task02\bin\Debug\Task02.exe.config
+C:\Users\Domagoj\Documents\C#\1.-Zadaca\Homework01\Task02\bin\Debug\Task02.exe
+C:\Users\Domagoj\Documents\C#\1.-Zadaca\Homework01\Task02\bin\Debug\Task02.pdb
+C:\Users\Domagoj\Documents\C#\1.-Zadaca\Homework01\Task02\obj\Debug\Task02.exe
+C:\Users\Domagoj\Documents\C#\1.-Zadaca\Homework01\Task02\obj\Debug\Task02.pdb

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Homework01 {
+namespace Task01 {
     public class ListExample {
         static void Main(string[] args) {
             IntegerList listOfIntegers = new IntegerList();
