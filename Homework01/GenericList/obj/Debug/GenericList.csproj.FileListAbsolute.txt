@@ -1,0 +1,5 @@
+C:\Users\Domagoj\Documents\C#\1.-Zadaca\Homework01\GenericList\bin\Debug\GenericList.dll
+C:\Users\Domagoj\Documents\C#\1.-Zadaca\Homework01\GenericList\bin\Debug\GenericList.pdb
+C:\Users\Domagoj\Documents\C#\1.-Zadaca\Homework01\GenericList\obj\Debug\GenericList.csprojResolveAssemblyReference.cache
+C:\Users\Domagoj\Documents\C#\1.-Zadaca\Homework01\GenericList\obj\Debug\GenericList.dll
+C:\Users\Domagoj\Documents\C#\1.-Zadaca\Homework01\GenericList\obj\Debug\GenericList.pdb

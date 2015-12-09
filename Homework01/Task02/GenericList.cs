@@ -5,14 +5,52 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Task02 {
-    class GenericList<T> : IGenericList<T> {
 
+    /// <summary>
+    /// Collection of items which can be compared with list. Elements
+    /// can be added and removed and user can check if collection contains
+    /// certain element. Adding and retrieving is executed in constant time,
+    /// searching and removing is linear in time.
+    /// </summary>
+    /// 
+    public class GenericList<T> : IGenericList<T> {
+
+        /// <summary>
+        /// Default array capacity if user did not specify
+        /// initial size of array.
+        /// </summary>
+        private const int DefaultSize = 4;
+
+        /// <summary>
+        /// Resize factor used when size of this collection
+        /// has to be increased.
+        /// </summary>
+        private const int ResizeFactor = 2;
+
+        /// <summary>
+        /// Array of elements which holds actual data.
+        /// Data count can be less then array lenght.
+        /// </summary>
         private T[] _internalStorage;
+
+        /// <summary>
+        /// Number of elements stored in this collection.
+        /// </summary>
         public int Count { get; private set; }
 
-        public GenericList() : this(4) {
+        /// <summary>
+        /// Default constructor. Creates new GenericList collection
+        /// with default size.
+        /// </summary>
+        public GenericList() : this(DefaultSize) {
         }
 
+        /// <summary>
+        /// Creates new IntegerList with initial size specified as
+        /// only argument. Initial size has to be nonnegative number,
+        /// appropriate exception will be thrown otherwise.
+        /// </summary>
+        /// <param name="initialSize">Initial collection size.</param>
         public GenericList(int initialSize) {
             if (initialSize < 0) {
                 throw new ArgumentOutOfRangeException("Initial size has to " +
@@ -24,6 +62,7 @@ namespace Task02 {
         }
 
         public void Add(T item) {
+            // Check if collection has to be resized.
             if (Count == _internalStorage.Length) {
                 resize();
             }
@@ -32,24 +71,37 @@ namespace Task02 {
             Count++;
         }
 
+        /// <summary>
+        /// Resizes this collection by the specified resize factor.
+        /// Complexity of this method is linear in number of elements
+        /// currently stored in this collection.
+        /// </summary>
         private void resize() {
-            T[] tmpStorage = new T[2 * Count];
+            // Create new array with new size.
+            T[] tmpStorage = new T[ResizeFactor * Count];
+
+            // Transfer all elements to the new array.
             for (int index = 0; index < _internalStorage.Length; index++) {
                 tmpStorage[index] = _internalStorage[index];
             }
+
             _internalStorage = tmpStorage;
         }
 
         public bool Remove(T item) {
+            // Find first occurrence of an item and remove it.
             int itemIndex = IndexOf(item);
             return RemoveAt(itemIndex);
         }
 
         public bool RemoveAt(int index) {
+            // Check if index is out of bounds.
             if (index < 0 || index >= Count) {
                 return false;
             }
 
+            // Remove element by moving all elements behind it by one
+            // position to the left
             for (int position = index; position < Count - 1; position++) {
                 _internalStorage[position] = _internalStorage[position + 1];
             }

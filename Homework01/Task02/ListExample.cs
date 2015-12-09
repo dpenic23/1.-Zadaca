@@ -5,7 +5,17 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Task02 {
-    class ListExample {
+
+    /// <summary>
+    /// Command line application which presents usage of GenericList
+    /// collection.
+    /// </summary>
+    public class ListExample {
+
+        /// <summary>
+        /// Method called once program is run.
+        /// </summary>
+        /// <param name="args">Command line arguments.</param>
         static void Main(string[] args) {
             IGenericList<string> stringList = new GenericList<string>();
             stringList.Add("Hello");

@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace Task02 {
 
-    interface IGenericList<T> {
+    /// <summary>
+    /// Represents data structure which contains various elements and
+    /// provides various methods for dynamically storing these values.
+    /// </summary>
+    public interface IGenericList<T> {
 
         /// <summary>
         /// Adds an item to the collection.

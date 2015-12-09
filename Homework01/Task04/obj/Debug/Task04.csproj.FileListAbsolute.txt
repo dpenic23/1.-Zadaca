@@ -1,0 +1,8 @@
+C:\Users\Domagoj\Documents\C#\1.-Zadaca\Homework01\Task04\bin\Debug\Task04.exe.config
+C:\Users\Domagoj\Documents\C#\1.-Zadaca\Homework01\Task04\bin\Debug\Task04.exe
+C:\Users\Domagoj\Documents\C#\1.-Zadaca\Homework01\Task04\bin\Debug\Task04.pdb
+C:\Users\Domagoj\Documents\C#\1.-Zadaca\Homework01\Task04\obj\Debug\Task04.csprojResolveAssemblyReference.cache
+C:\Users\Domagoj\Documents\C#\1.-Zadaca\Homework01\Task04\obj\Debug\Task04.exe
+C:\Users\Domagoj\Documents\C#\1.-Zadaca\Homework01\Task04\obj\Debug\Task04.pdb
+C:\Users\Domagoj\Documents\C#\1.-Zadaca\Homework01\Task04\bin\Debug\GenericList.dll
+C:\Users\Domagoj\Documents\C#\1.-Zadaca\Homework01\Task04\bin\Debug\GenericList.pdb

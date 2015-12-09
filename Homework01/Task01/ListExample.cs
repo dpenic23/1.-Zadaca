@@ -5,7 +5,18 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Task01 {
+
+    /// <summary>
+    /// Command line application which presents usage of IntegerList
+    /// collection. Integers are being added and removed from the
+    /// collection.
+    /// </summary>
     public class ListExample {
+
+        /// <summary>
+        /// Method called once program is run.
+        /// </summary>
+        /// <param name="args">Command line arguments.</param>
         static void Main(string[] args) {
             IntegerList listOfIntegers = new IntegerList();
 
